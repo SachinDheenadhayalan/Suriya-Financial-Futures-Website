@@ -7,7 +7,8 @@
       "WebFetch(domain:www.councilofnonprofits.org)",
       "WebSearch",
       "Bash(git push:*)",
-      "Read(//var/folders/bm/r4xgz8_50x3_gfj6pcn6j5ym0000gn/T/TemporaryItems/NSIRD_screencaptureui_IS9XPW/**)"
+      "Read(//var/folders/bm/r4xgz8_50x3_gfj6pcn6j5ym0000gn/T/TemporaryItems/NSIRD_screencaptureui_IS9XPW/**)",
+      "Read(//var/folders/bm/r4xgz8_50x3_gfj6pcn6j5ym0000gn/T/TemporaryItems/NSIRD_screencaptureui_mArrYU/**)"
     ],
     "deny": [],
     "ask": []

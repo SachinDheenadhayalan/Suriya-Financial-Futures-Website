@@ -653,6 +653,17 @@ section {
     box-shadow: 0 8px 25px rgba(255, 152, 0, 0.4);
 }
 
+.tally-form-container {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.tally-form-container iframe {
+    border-radius: 8px;
+    box-shadow: none;
+    background: transparent;
+}
+
 .contact-info {
     background: white;
     padding: 3rem;

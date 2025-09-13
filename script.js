@@ -130,14 +130,37 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 16);
     }
 
-    // Add loading animation for cards
+    // Scroll Animation System
+    const scrollAnimationObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+                // Don't unobserve to allow re-animation if element goes out and back in view
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    });
+
+    // Observe all elements with scroll animation classes
+    const scrollElements = document.querySelectorAll('.scroll-animate, .scroll-fade-up, .scroll-slide-left, .scroll-slide-right, .scroll-scale');
+    scrollElements.forEach(element => {
+        scrollAnimationObserver.observe(element);
+    });
+
+    // Enhanced card animation with better performance
     const cards = document.querySelectorAll('.program-card, .involvement-card, .impact-stat');
     
     const cardObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                // Add a slight delay for staggered effect if not already handled by CSS
+                const delay = Array.from(cards).indexOf(entry.target) * 100;
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, delay);
                 cardObserver.unobserve(entry.target);
             }
         });
@@ -146,12 +169,16 @@ document.addEventListener('DOMContentLoaded', function() {
         rootMargin: '0px 0px -50px 0px'
     });
 
-    // Initially hide cards and observe them
+    // Initially hide cards and observe them (only if they don't have scroll animation classes)
     cards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        cardObserver.observe(card);
+        if (!card.classList.contains('scroll-animate') && 
+            !card.classList.contains('scroll-fade-up') && 
+            !card.classList.contains('scroll-scale')) {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            cardObserver.observe(card);
+        }
     });
 });
 

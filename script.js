@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 // Add a slight delay for staggered effect if not already handled by CSS
-                const delay = Array.from(cards).indexOf(entry.target) * 100;
+                const delay = Array.from(cards).indexOf(entry.target) * 50;
                 setTimeout(() => {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
@@ -175,8 +175,8 @@ document.addEventListener('DOMContentLoaded', function() {
             !card.classList.contains('scroll-fade-up') && 
             !card.classList.contains('scroll-scale')) {
             card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            card.style.transform = 'translateY(15px)';
+            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
             cardObserver.observe(card);
         }
     });

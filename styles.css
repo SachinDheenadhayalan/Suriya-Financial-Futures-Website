@@ -230,6 +230,7 @@ p {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: white;
 }
 
 /* Section Styling */
@@ -678,11 +679,31 @@ footer {
 }
 
 .footer-bottom {
-    text-align: center;
     padding-top: 2rem;
     border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: rgba(255,255,255,0.7);
     font-size: 1rem;
+}
+
+.developer-credit {
+    text-align: right;
+    margin: 0;
+}
+
+.developer-credit a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.developer-credit a:hover {
+    color: #FF9800;
 }
 
 /* Responsive Design */
@@ -746,6 +767,16 @@ footer {
     
     .container {
         padding: 0 15px;
+    }
+    
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .developer-credit {
+        text-align: center;
     }
 }
 

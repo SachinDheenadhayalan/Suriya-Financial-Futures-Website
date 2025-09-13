@@ -139,6 +139,13 @@ p {
     z-index: 2;
 }
 
+.hero-logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
 .hero-tagline {
     font-size: 4.5rem;
     margin-bottom: 2rem;
@@ -305,6 +312,20 @@ section {
     color: #1E88E5;
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
+}
+
+.story-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 /* Programs Section */
@@ -632,6 +653,10 @@ footer {
     margin-bottom: 1rem;
 }
 
+.footer-section p {
+    color: white;
+}
+
 .footer-section ul {
     list-style: none;
 }
@@ -641,7 +666,7 @@ footer {
 }
 
 .footer-section a {
-    color: rgba(255,255,255,0.8);
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease;
     font-size: 1rem;
@@ -704,6 +729,11 @@ footer {
     .mission-vision {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    
+    .story-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .contact-content {

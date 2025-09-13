@@ -5,7 +5,9 @@
       "Bash(git init:*)",
       "Bash(git commit:*)",
       "WebFetch(domain:www.councilofnonprofits.org)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(git push:*)",
+      "Read(//var/folders/bm/r4xgz8_50x3_gfj6pcn6j5ym0000gn/T/TemporaryItems/NSIRD_screencaptureui_IS9XPW/**)"
     ],
     "deny": [],
     "ask": []

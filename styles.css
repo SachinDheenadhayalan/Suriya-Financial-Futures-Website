@@ -442,13 +442,17 @@ section {
     overflow: hidden;
     margin-top: 2rem;
     position: relative;
+    width: 100%;
+    max-width: calc(4 * 200px + 3 * 3rem);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .clients-track {
     display: flex;
     gap: 3rem;
-    animation: scroll 20s linear infinite;
-    width: calc(200% + 6rem);
+    animation: scroll 30s linear infinite;
+    width: fit-content;
 }
 
 .client-logo {
@@ -487,7 +491,7 @@ section {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(calc(-4 * 200px - 4 * 3rem));
     }
 }
 
@@ -827,9 +831,26 @@ footer {
         gap: 1.5rem;
     }
     
+    .clients-carousel {
+        max-width: calc(4 * 150px + 3 * 2rem);
+    }
+    
+    .clients-track {
+        gap: 2rem;
+    }
+    
     .client-logo {
         width: 150px;
         height: 100px;
+    }
+    
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-4 * 150px - 4 * 2rem));
+        }
     }
     
     .contact-content {

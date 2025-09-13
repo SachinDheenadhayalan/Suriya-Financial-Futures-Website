@@ -691,9 +691,15 @@ footer {
     font-size: 1rem;
 }
 
+.footer-bottom-content p {
+    color: white;
+    margin: 0;
+}
+
 .developer-credit {
     text-align: right;
     margin: 0;
+    color: white;
 }
 
 .developer-credit a {
